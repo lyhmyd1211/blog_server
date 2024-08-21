@@ -26,11 +26,12 @@ export default (app: Application) => {
   router.get('/api/getMonth', article.getMonth);
 
 
-  router.get('/api/getArticleTypeList', jwt, types.getArticleTypeList);
+  router.get('/api/getArticleTypeList',  types.getArticleTypeList);
   router.get('/api/delArticleType', jwt, types.delArticleType);
   router.post('/api/addArticleType', jwt, types.addArticleType);
   router.post('/api/editArticleType', jwt, types.editArticleType);
   router.get('/api/getArticleTypeById', jwt, types.getArticleTypeById);
+
 
   router.get('/api/hasCode', jwt, types.hasCode);
   router.get('/api/getTypeIdByCode', jwt, types.getIdByCode);

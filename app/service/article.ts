@@ -10,7 +10,7 @@ export default class ArticleService extends Service {
   ];
   async queryArticle(page = 1, size = 10, type?: string) {
     const { Article } = this.ctx.model;
-    const where = type ? { where: { text: type } } : {};
+    const where = type ? { where: { code: type } } : {};
     return await Article.findAndCountAll({
       order: [[ 'create_time', 'DESC' ]],
       offset: (page - 1) * size,
